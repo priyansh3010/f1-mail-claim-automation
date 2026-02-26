@@ -44,8 +44,10 @@ while True:
         else:
             print("Please enter a valid integer (1 or 2).")
 
-print(f"Press {start_key} to start the program (press 'q' to exit anytime).")
+print(f"Press '{start_key}' to start the program (press 'q' to exit anytime).")
 keyboard.wait(start_key)
+print("Program Started...")
+
 while True:
 
     current_screen = capture_fullscreen()
@@ -62,11 +64,3 @@ while True:
     elif current_state_assessed == "mail-rewards-screen":
         pydirectinput.press("enter")
         time.sleep(25)
-    """
-    time.sleep(2)
-    pydirectinput.press("enter")
-    time.sleep(1)
-    pydirectinput.press("enter")
-    print(pyautogui.locateOnScreen("screenshots/sample_rewards.png", confidence=0.9))
-    print("Made it here2")
-    """
