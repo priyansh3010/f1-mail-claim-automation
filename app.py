@@ -1,14 +1,10 @@
 import keyboard
-import cv2
-import pyautogui
 import pydirectinput
-import numpy as np
 import os
 import time
 import threading
 
 from helpers import capture_fullscreen, best_screen_match
-from PIL import Image
 
 # 
 def listen_for_exit():
