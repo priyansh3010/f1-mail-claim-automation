@@ -35,6 +35,8 @@ while True:
         time.sleep(0.5)
     except ValueError:
         print("Please enter an integer.")
+    except OSError:
+        print("\nPlease enter an integer.")
     else:
         if user_input == 1:
             break
