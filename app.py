@@ -6,7 +6,7 @@ import threading
 
 from helpers import capture_fullscreen, best_screen_match
 
-# 
+# Function to listen for 'q' to quit program as per when user wants
 def listen_for_exit():
     keyboard.wait('q')  # blocks until 'q' is pressed
     print("Exiting...")
@@ -44,23 +44,21 @@ while True:
         else:
             print("Please enter a valid integer (1 or 2).")
 
+# Wait for user to start program functionality
 print(f"Press '{start_key}' to start the program (press 'q' to exit anytime).")
 keyboard.wait(start_key)
 print("Program Started...")
 
+# Automated algorithm starts
 while True:
-
     current_screen = capture_fullscreen()
     current_state_assessed = best_screen_match(current_screen)
 
     if current_state_assessed == "online-services-error":
         pydirectinput.press("enter")
-        time.sleep(20)
-    elif current_state_assessed in ["communicating-online-services", "mail-loading-screen1", "mail-loading-screen2"]:
-        time.sleep(20)
     elif current_state_assessed in ["mail-screen1", "mail-screen2"]:
         pydirectinput.press("enter")
-        time.sleep(5)
     elif current_state_assessed == "mail-rewards-screen":
         pydirectinput.press("enter")
-        time.sleep(25)
+    
+    time.sleep(5)
