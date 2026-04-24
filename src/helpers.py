@@ -18,7 +18,7 @@ def best_screen_match(current_screen):
     lowest = sys.maxsize
     lowest_name = ""
 
-    for file_name in glob.glob("../screenshots/*.png"):
+    for file_name in glob.glob("./screenshots/*.png"):
         sample_screen = Image.open(file_name)
         sample_screen = np.array(sample_screen)
         sample_screen = cv2.cvtColor(sample_screen, cv2.COLOR_BGR2GRAY)
