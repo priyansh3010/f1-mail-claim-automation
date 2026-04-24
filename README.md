@@ -66,7 +66,6 @@ f1-mail-claimer/
         └──mail-screen1.png
         └──mail-screen2.png
         └──online-services-error.png
-├── mail_claimer.exe
 ├── requirements.txt
 └── README.md
 ```
