@@ -6,7 +6,7 @@ A **computer vision automation tool** that autonomously claims in-game mail rewa
 
 ## 🧠 How It Works
 
-The tool uses **OpenCV** to continuously monitor the screen, detect UI state transitions via frame differencing, and simulate the exact keypresses needed to navigate menus — entirely hands-free.
+The tool uses **OpenCV** to continuously monitor the screen, detect UI state transitions via frame differencing, and simulate the exact keypresses needed to navigate menus - entirely hands-free.
 
 ```
 Screen Capture (loop)
@@ -22,9 +22,9 @@ Next State → Repeat until all mail claimed
 
 ### Key Design Decisions
 
-- **Frame differencing (`absdiff`)** — detects meaningful UI transitions (animations, screen changes) rather than relying on brittle template matching that fails with resolution or brightness changes
-- **State-gated inputs** — keypresses are only sent on validated game states, preventing false triggers and timing errors
-- **Context-aware navigation** — different menu states trigger different input sequences, handling the full end-to-end reward claim flow
+- **Frame differencing (`absdiff`)** - detects meaningful UI transitions (animations, screen changes) rather than relying on brittle template matching that fails with resolution or brightness changes
+- **State-gated inputs** - keypresses are only sent on validated game states, preventing false triggers and timing errors
+- **Context-aware navigation** - different menu states trigger different input sequences, handling the full end-to-end reward claim flow
 
 ---
 
@@ -32,7 +32,7 @@ Next State → Repeat until all mail claimed
 
 - Fully autonomous mail reward claiming in F1 25
 - Robust UI state detection via `cv2.absdiff` frame differencing
-- Context-aware input sequencing — no hardcoded timing delays
+- Context-aware input sequencing - no hardcoded timing delays
 - Eliminates ~2 hours of manual repetitive input per session
 - Packaged as a standalone `.exe` via **PyInstaller** — no Python install required
 
@@ -66,6 +66,7 @@ f1-mail-claimer/
         └──mail-screen1.png
         └──mail-screen2.png
         └──online-services-error.png
+├── mail_claimer.exe
 ├── requirements.txt
 └── README.md
 ```
@@ -74,7 +75,7 @@ f1-mail-claimer/
 
 ## ⚙️ Setup & Usage
 
-### Option A — Run from source
+### Option A - Run from source
 
 ```bash
 # Clone the repo
@@ -88,9 +89,9 @@ pip install -r requirements.txt
 python src/app.py
 ```
 
-### Option B — Run the executable (Windows)
+### Option B - Run the executable (Windows)
 
-Download `mail_claimer.exe` from [Releases](https://github.com/yourusername/f1-mail-claimer/releases), launch F1 25, navigate to the mail screen, and run the executable.
+Download `mail_claimer.exe` from [Releases](https://github.com/yourusername/f1-mail-claimer/releases), launch F1 25, navigate to the mail screen, and run the executable (screenshots folder must be in the same directory as the .exe file).
 
 ---
 
